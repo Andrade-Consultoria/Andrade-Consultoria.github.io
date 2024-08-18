@@ -12,9 +12,9 @@ fi
 # Get the current branch name
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-# Function to generate a random date within the past 365 days
+# Function to generate a random date within the past 90 days
 generate_random_date() {
-  echo $(date -d "$((RANDOM % 365 + 1)) days ago" '+%Y-%m-%d %H:%M:%S %z')
+  echo $(date -d "$((RANDOM % 90 + 1)) days ago" '+%Y-%m-%d %H:%M:%S %z')
 }
 
 for i in $(seq 1 $commit_count)
